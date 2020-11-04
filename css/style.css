@@ -49,6 +49,7 @@ body{
 
 }
 form{
+    width: 100%;
     margin-top: 50px;
     position: relative;
     left: 25%;
@@ -62,58 +63,76 @@ form{
     height: 46px;
 }
 #search{
-    font-size: 1.1em;
+    position: relative;
+    height: 50px;
+    font-size: 0.8em;
     line-height: 46px;
     width: 100%;
     color: rgb(0,0,0);
     border: none;
     border-radius: 30px;
     padding: 0 0 0 20px;
+    z-index: 1;
+    text-decoration: none;
 }
-
+#search:focus, #submit:focus{
+    outline: none;
+}
 #submit{
+    height: 50px;
+    z-index: 2;
     border-radius: 30px;
+    border: none;
     position: absolute;
     top: 0;
-    right: -25px;
+    right: -20px;
     color: rgb(91, 40, 231);
     background-color: rgba(131, 224, 212, 0.986);
     font-size: 0.8em;
-    margin-right: 0;
+    /* margin-right: 0; */
 }
 #list-movie{
     display: flex;
     overflow-x: auto;
     background-color: rgb(255, 253, 253);
     border: rgb(236, 223, 223) 15px solid;
-    margin-top: -15px;
+    /* margin-top: -15px; */
     /* width: 100%; */
     margin: 0 20px;
     padding: 10px;
-    
-    
+    /* height: 380px;     */
 }
+/* #list-movie a{
+    color: seagreen;
+    align-items: center;
+} */
 .movie{
-    margin: 15px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 15px;  
     border: rgb(197, 72, 228) solid 2px;
-        
+    height: 100%;
+    
 }
 .movie h2{
-    color: blue;
-    font-size: 18px;
-    height: 50px;
+    color: rgb(185, 197, 14);
+    font-size: 1.2em;
+    margin-left: 15px;
 }
 .movie img{
+    min-height: 300px;
     max-width: 250px;
-    max-height: 250px;
+    max-height: 300px;
     border-radius: 15%;
 
 }
 .date{
-    font-size: 0.8em;
+    font-size: 1em;
+    color: slategray;
     font-weight: bold;
-    position: relative;
-    right: 105px;
+    align-self: flex-end;
+    margin-right: 15px;
 }
 #error{
     text-align: right;
@@ -123,12 +142,22 @@ form{
     font-size: 2.3em;
 }
 footer{
-    position: absolute;
-    bottom: 5px;
+    position: relative;
+    bottom: 0;
+    height: 100px;
     width: 100%;
     background-color:#147dd3 ;
 }
 footer p{
-    text-align: center;
-    font-size: 1.8em;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    font-size: 1.4em;
+    /* transform: translateY(-50% -50%); */
 }
+@media (min-width: 744px) {
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  }

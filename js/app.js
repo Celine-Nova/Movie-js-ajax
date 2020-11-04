@@ -16,9 +16,10 @@ var app = {
         //je boucle sur le tableau de reponse pour obtenir les films
         for(movie of movies){
             let divMovie = document.createElement('div');
-            divMovie.className = 'movie';
-            let titleMovie = document.createElement('h2');
+            divMovie.className = 'movie','col-lg-12';
             let linkMovie = document.createElement('a');
+            linkMovie.style.textDecoration = 'none';
+            let titleMovie = document.createElement('h2');
             let poster = document.createElement('img');
             let date = document.createElement('span');
             date.className = 'date'
@@ -27,11 +28,11 @@ var app = {
             titleMovie.textContent = movie.title;
             date.textContent = movie.release_date;
             //    console.log(titleMovie);
-            linkMovie.appendChild(poster);
             divMovie.appendChild(titleMovie);
-            divMovie.appendChild(linkMovie);
+            divMovie.appendChild(poster);
             divMovie.appendChild(date);
-            listMovie.appendChild(divMovie);
+            linkMovie.appendChild(divMovie);
+            listMovie.appendChild(linkMovie);
         }
     },
     //je veux récupérer les films
