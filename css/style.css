@@ -5,6 +5,7 @@ body{
     padding: 0;
     margin: 0;  
 }
+/* Header*/
 #navbar{
     background-color:#147dd3 ;
     height: 100px;
@@ -28,14 +29,12 @@ body{
     text-decoration: none;
 }
 #banner{
-    /* width: 100%; */
     min-height:300px;
     background-image:url('https://cdn.pixabay.com/photo/2017/09/17/08/39/curtain-2757815_960_720.png');
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-size: cover;   
     position: relative;
-    /* top: -28px; */
     z-index: 1;
     margin: 0 125px;  
 }
@@ -57,9 +56,6 @@ form{
 #search, #submit{
     border-radius: 15%;
     height: 50px;
-    /* position: absolute;
-    top: 250px;
-    left: 550px; */
     height: 46px;
 }
 #search{
@@ -89,8 +85,8 @@ form{
     color: rgb(91, 40, 231);
     background-color: rgba(131, 224, 212, 0.986);
     font-size: 0.8em;
-    /* margin-right: 0; */
 }
+/* Main */
 #list-movie{
     display: flex;
     overflow-x: auto;
@@ -137,6 +133,7 @@ main{
     left: 225px;
     font-size: 2.3em;
 }
+/*Footer*/
 footer{
     position: fixed;
     bottom: 0;
@@ -149,8 +146,9 @@ footer p{
     top: 15px;
     left: 50%;
     font-size: 1.4em;
-    /* transform: translateY(-50% -50%); */
 }
+
+/* Responsive */
 @media (max-width: 1457px) {
     form{
         position: relative;
@@ -183,10 +181,10 @@ footer p{
     }
     
     #title{
-        font-size: 1em;
+        font-size: 0.8em;
         position: absolute;
         top: 25px;
-        left: 6px;
+        left: 20px;
     }
     form{
         width: 75%;
@@ -202,7 +200,16 @@ footer p{
         margin: 0;
        
     }
+    #navbar ul{
+        margin-left: 5px;
+        padding-left: 15px;
+    }
     #navbar a {
+        font-size: 1em;
+    }
+    #error{
+        position: relative;
+        left: 15px;
         font-size: 1em;
     }
   } 
