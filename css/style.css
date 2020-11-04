@@ -96,16 +96,12 @@ form{
     overflow-x: auto;
     background-color: rgb(255, 253, 253);
     border: rgb(236, 223, 223) 15px solid;
-    /* margin-top: -15px; */
-    /* width: 100%; */
     margin: 0 20px;
-    padding: 10px;
-    /* height: 380px;     */
+    padding: 20px 0;
 }
-/* #list-movie a{
-    color: seagreen;
-    align-items: center;
-} */
+main{
+    margin-bottom: 75px;
+}
 .movie{
     display: flex;
     flex-direction: column;
@@ -142,9 +138,9 @@ form{
     font-size: 2.3em;
 }
 footer{
-    position: relative;
+    position: fixed;
     bottom: 0;
-    height: 100px;
+    height: 70px;
     width: 100%;
     background-color:#147dd3 ;
 }
@@ -155,9 +151,58 @@ footer p{
     font-size: 1.4em;
     /* transform: translateY(-50% -50%); */
 }
-@media (min-width: 744px) {
-    body {
-      margin: 0;
-      padding: 0;
+@media (max-width: 1457px) {
+    form{
+        position: relative;
+        left: 2px;
     }
+}
+
+@media (min-width: 729px) and (max-width: 1210px) {
+    
+    #title{
+        font-size: 1.3em;
+        position: absolute;
+        left: 50px;
+    }
+    form{
+        position: relative;
+        left: 2px;
+    }
+
   }
+  @media (min-width: 320px) and (max-width: 729px){
+        
+    /* html{
+        margin: 0;
+        padding: 0;  
+    }*/
+    #banner{
+        width: 100%;
+        margin: 0;
+    }
+    
+    #title{
+        font-size: 1em;
+        position: absolute;
+        top: 25px;
+        left: 6px;
+    }
+    form{
+        width: 75%;
+        position: relative;
+        left: 22px;
+    }
+    footer p {
+        font-size: 1em;
+        position: absolute;
+        left: 45%;
+    }
+    #list-movie{
+        margin: 0;
+       
+    }
+    #navbar a {
+        font-size: 1em;
+    }
+  } 
